@@ -10,6 +10,21 @@ async function main() {
   // (Re-)Create dummy `User` and `Message` records
   await prisma.user.create({
     data: {
+      name: "jColaco.dev",
+      messages: {
+        create: [
+          {
+            body: "Frontend",
+          },
+          {
+            body: "Backend",
+          },
+        ],
+      },
+    },
+  });
+  await prisma.user.create({
+    data: {
       name: "Jack",
       messages: {
         create: [
