@@ -1,4 +1,4 @@
-import { createServer } from 'http'
+const http = require("http"); 
 import { createYoga } from 'graphql-yoga'
 import { schema } from './schema'
  
@@ -7,7 +7,7 @@ const port = Number(process.env.API_PORT) || 4000
 const yoga = createYoga({ schema })
  
 // Pass it into a server to hook into request handlers.
-const server = createServer(yoga)
+const server = http.createServer(yoga)
  
 // Start the server and you're done!
 server.listen(4000, () => {
