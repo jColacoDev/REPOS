@@ -19,6 +19,9 @@ async function main() {
           {
             body: "Backend",
           },
+          {
+            body: "DevOps",
+          },
         ],
       },
     },
